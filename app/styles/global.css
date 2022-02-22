@@ -37,12 +37,15 @@ body {
   margin: 0;
   background-color: var(--color-background);
   color: var(--color-foreground);
+  background-image: url(/SVG/animated-shape.svg);
+  background-position: center;
+  background-size: cover;
 }
 
 body {
   font-family: var(--font-body);
   line-height: 1.5;
-  background-image: url(/SVG/animated-shape.svg);
+ 
 }
 
 a {

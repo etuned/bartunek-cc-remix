@@ -64,7 +64,7 @@ export default function Index() {
         <h2>Edwin Bartunek</h2>
         <p>Educator and Software Developer</p>
         <p>
-          I am currently looking for new opportunities. Stay tuned for more updates in the coming weeks.
+          Stay tuned for more updates in the coming weeks.
         </p>
       </main>
     </div>
