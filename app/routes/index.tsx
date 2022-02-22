@@ -49,8 +49,8 @@ export let loader: LoaderFunction = () => {
 // https://remix.run/api/conventions#meta
 export let meta: MetaFunction = () => {
   return {
-    title: "Remix Starter",
-    description: "Welcome to remix!"
+    title: "Edwin Bartunek's site",
+    description: "A place for ideas from a software developer"
   };
 };
 
