@@ -7,21 +7,17 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch
-} from "remix";
-import type { LinksFunction } from "remix";
+} from "@remix-run/react"
 
-import globalStylesUrl from "~/styles/global.css";
-import darkStylesUrl from "~/styles/dark.css";
+import { LinksFunction } from "@remix-run/react/routeModules";
+
+
+import globalStylesUrl from "~/styles/app.css";
 
 // https://remix.run/api/app#links
 export let links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: globalStylesUrl },
-    {
-      rel: "stylesheet",
-      href: darkStylesUrl,
-      media: "(prefers-color-scheme: dark)"
-    }
   ];
 };
 
@@ -48,8 +44,7 @@ export function ErrorBoundary({ error }: { error: Error }) {
           <p>{error.message}</p>
           <hr />
           <p>
-            Hey, developer, you should replace this with what you want your
-            users to see.
+            Oh no!
           </p>
         </div>
       </Layout>
@@ -109,7 +104,7 @@ function Document({
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-gradient-to-r from-cyan-900 to-blue-900  text-white">
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -121,33 +116,20 @@ function Document({
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="remix-app">
-      <header className="remix-app__header">
-        <div className="container remix-app__header-content">
-          <Link to="/" title="Bartunek.cc" className="remix-app__header-home-link">
-            BARTUNEK.CC
-          </Link>
-          <nav aria-label="Main navigation" className="remix-app__header-nav">
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <a href="https://github.com/etuned/">GitHub</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+    <div>
+      <header>
+        <nav className="px-2 py-3 bg-cyan-800 shadow-lg">
+          <ul className="flex justify-around items-center">
+            <li className="hover:text-slate-400"><h1><Link to='/'>Bartunek.CC</Link></h1></li>
+            <li className="flex-grow"></li>
+            <li className="hover:text-slate-400 mr-3"><Link to='/'>Home</Link></li>
+            <li><a className="hover:text-slate-400" target='_blank' rel="noopener" href='https://www.github.com/etuned'>Github</a></li>
+          </ul>
+        </nav>
       </header>
-      <div className="remix-app__main">
-        <div className="container remix-app__main-content">{children}</div>
-      </div>
-      <footer className="remix-app__footer">
-        <div className="container remix-app__footer-content">
-          <p>&copy; 2022 Edwin Bartunek</p>
-        </div>
-      </footer>
-    </div>
+      <div>{children}</div>
+
+    </div >
   );
 }
 

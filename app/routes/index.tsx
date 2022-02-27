@@ -50,7 +50,7 @@ export let loader: LoaderFunction = () => {
 export let meta: MetaFunction = () => {
   return {
     title: "Edwin Bartunek's site",
-    description: "A place for ideas from a software developer"
+    description: "A place for ideas from a software developer and educator"
   };
 };
 
@@ -59,14 +59,15 @@ export default function Index() {
   let data = useLoaderData<IndexData>();
 
   return (
-    <div className="remix__page">
-      <main>
+    <main className="">
+      <div className="flex flex-col h-96 justify-evenly items-center">
         <h2>Edwin Bartunek</h2>
         <p>Educator and Software Developer</p>
-        <p>
-          Stay tuned for more updates in the coming weeks.
+        <p className="p-5 max-w-xl">
+          Hello and welcome to my small little island on the internet.
+          I'm a software engineer who enjoys problem solving with software. I currently work at an investment company building frontends.
         </p>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
