@@ -60,6 +60,7 @@ li::before {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 1ch;
   align-items: center;
   background: #33a3a3;
   width: 18rem;
