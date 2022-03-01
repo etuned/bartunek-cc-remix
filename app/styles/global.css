@@ -31,6 +31,13 @@ ul, ol {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+ul .links, ul li, ol .links, ol li {
+  display: inline-flex;
+}
+
+li {
+  margin: 1em;
+}
 
 li::before {
   content: ">";

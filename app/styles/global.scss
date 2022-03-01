@@ -4,7 +4,6 @@ $primary-dark: hsl(248, 31%, 20%);
 $primary-color: hsl(0, 0%, 98%);
 $primary-accent: hsl(180, 52%, 42%);
 $primary-accent-light: hsl(180, 50%, 82%);
-
 $line-height: 1.4;
 
 :root {
@@ -39,6 +38,13 @@ ul, ol {
     list-style: none;
     margin-top: 1em;
     margin-bottom: 1em;
+    .links, li {
+        display: inline-flex;
+    }
+}
+
+li {
+    margin: 1em;
 }
 
 li::before {

@@ -6,7 +6,7 @@ export default function Index() {
         <img src='character.svg' alt='man drinking coffee' />
       </figcaption>
       <p>Check out some helpful links about me.</p>
-      <ul>
+      <ul className="links">
         <li>
           <a
             target="_blank"
