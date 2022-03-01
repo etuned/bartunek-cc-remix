@@ -1,5 +1,3 @@
-# Edwin Batunek's Site
+# Edwin's site
 
-Made with love with [Remix](https://remix.run/) and [Tailwind](https://tailwindcss.com/).
-
-
+Built with love with [Remix](https://remix.run).

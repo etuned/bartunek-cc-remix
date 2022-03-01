@@ -1,73 +1,36 @@
-import type { MetaFunction, LoaderFunction } from "remix";
-import { useLoaderData, json, Link } from "remix";
-
-type IndexData = {
-  resources: Array<{ name: string; url: string }>;
-  demos: Array<{ name: string; to: string }>;
-};
-
-// Loaders provide data to components and are only ever called on the server, so
-// you can connect to a database or run any server side code you want right next
-// to the component that renders it.
-// https://remix.run/api/conventions#loader
-export let loader: LoaderFunction = () => {
-  let data: IndexData = {
-    resources: [
-      {
-        name: "Remix Docs",
-        url: "https://remix.run/docs"
-      },
-      {
-        name: "React Router Docs",
-        url: "https://reactrouter.com/docs"
-      },
-      {
-        name: "Remix Discord",
-        url: "https://discord.gg/VBePs6d"
-      }
-    ],
-    demos: [
-      {
-        to: "demos/actions",
-        name: "Actions"
-      },
-      {
-        to: "demos/about",
-        name: "Nested Routes, CSS loading/unloading"
-      },
-      {
-        to: "demos/params",
-        name: "URL Params and Error Boundaries"
-      }
-    ]
-  };
-
-  // https://remix.run/api/remix#json
-  return json(data);
-};
-
-// https://remix.run/api/conventions#meta
-export let meta: MetaFunction = () => {
-  return {
-    title: "Remix Starter",
-    description: "Welcome to remix!"
-  };
-};
-
-// https://remix.run/guides/routing#index-routes
 export default function Index() {
-  let data = useLoaderData<IndexData>();
-
   return (
-    <main className="">
-      <div className="flex flex-col h-96 justify-evenly items-center">
-        <h2>Edwin Bartunek</h2>
-        <p>Educator and Software Developer</p>
-        <p className="p-5 max-w-xl">
-          Hello and welcome to my small little island on the internet.
-          I'm a software engineer who enjoys problem solving with software. I currently work at an investment company building frontends.
-        </p>
-      </div>
-    </main>
+    <div className="page">
+      <h1>Hey! I'm Edwin.</h1>
+      <figcaption className="indexImage">
+        <img src='character.svg' alt='man drinking coffee' />
+      </figcaption>
+      <p>Check out some helpful links about me.</p>
+      <ul>
+        <li>
+          <a
+            target="_blank"
+            href="https://www.github.com/etuned/"
+            rel="noreferrer"
+          >
+            Github
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/ebartunek"
+            rel="noreferrer"
+          >
+            Linkedin
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://twitter.com/edwinbartunek" rel="noreferrer">
+            Twitter
+          </a>
+        </li>
+      </ul>
+    </div>
   );
 }
