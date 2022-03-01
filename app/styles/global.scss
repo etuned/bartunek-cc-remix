@@ -71,13 +71,17 @@ li::before {
     border-radius: 1ch;
     align-items: center;
     background: $primary-accent;
+    min-width: 18rem;
     width: 18rem;
     height: auto;
+    min-height: auto;
     margin-top: 1em;
     margin-bottom: 1em;
     img {
+        min-width: 10rem;
+        min-height: auto;
         width: 10rem;
-        height: auto;
+        min-height: auto;
     }
 }
 
