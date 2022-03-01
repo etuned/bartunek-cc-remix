@@ -63,14 +63,18 @@ li::before {
   border-radius: 1ch;
   align-items: center;
   background: #33a3a3;
+  min-width: 18rem;
   width: 18rem;
   height: auto;
+  min-height: auto;
   margin-top: 1em;
   margin-bottom: 1em;
 }
 .indexImage img {
+  min-width: 10rem;
+  min-height: auto;
   width: 10rem;
-  height: auto;
+  min-height: auto;
 }
 
 .container {

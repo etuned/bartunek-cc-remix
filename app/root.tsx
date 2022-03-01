@@ -30,7 +30,7 @@ export function CatchBoundary() {
             </h1>
             <figure>
               <figcaption className="indexImage">
-                <img src="404img.png" alt="fallen ice cream" />
+                <img src="404img.png" alt="fallen ice cream" width="200" height="200" />
               </figcaption>
             </figure>
             <p>Well, we all make mistakes. Luckily we can fix this.</p>
