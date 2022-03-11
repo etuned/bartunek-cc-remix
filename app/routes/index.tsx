@@ -1,6 +1,15 @@
+import React, { useLayoutEffect } from 'react'
+import { gsap } from 'gsap';
+
+
 export default function Index() {
+  const load = React.createRef<HTMLInputElement>();
+  useLayoutEffect(() => {
+    gsap.from(load.current, { opacity: 0, duration: 3 })
+    gsap.to(load.current, { opacity: 1, color: '#fafafa', duration: 3 })
+  }, [load])
   return (
-    <div className="page">
+    <div ref={load} className="page">
       <h1>Hey! I'm Edwin.</h1>
       <figcaption className="indexImage">
         <img src='character.svg' alt='man drinking coffee' width="200" height="200" />
