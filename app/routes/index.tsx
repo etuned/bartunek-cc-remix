@@ -1,12 +1,12 @@
-import React, { useLayoutEffect } from 'react'
+import React, { useEffect } from 'react'
 import { gsap } from 'gsap';
 
 
 export default function Index() {
   const load = React.createRef<HTMLInputElement>();
-  useLayoutEffect(() => {
-    gsap.from(load.current, { opacity: 0, duration: 3 })
-    gsap.to(load.current, { opacity: 1, color: '#fafafa', duration: 3 })
+  useEffect(() => {
+    gsap.fromTo(load.current, { opacity: 0, duration: 2 }, { opacity: 1, color: '#fafafa', duration: 2 })
+
   }, [load])
   return (
     <div ref={load} className="page">
