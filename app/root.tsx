@@ -1,3 +1,5 @@
+import React, { useEffect } from 'react'
+import { gsap } from 'gsap';
 import {
   Link,
   Links,
@@ -13,8 +15,15 @@ import { LinksFunction } from "remix";
 
 import globalStyles from "./styles/global.css"
 
+
+
 export function CatchBoundary() {
   const caught = useCatch();
+  const load = React.createRef<HTMLInputElement>();
+  useEffect(() => {
+    gsap.fromTo(load.current, { opacity: 0, duration: 2 }, { opacity: 1, color: '#fafafa', duration: 2 })
+
+  }, [load])
   return (
 
     <html lang="en">
@@ -27,7 +36,7 @@ export function CatchBoundary() {
       </head>
       <body>
         <main className="container">
-          <div className="page">
+          <div ref={load} className="page">
             <h1>
               {caught.status} {caught.statusText}
             </h1>

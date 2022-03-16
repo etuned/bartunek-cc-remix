@@ -76,6 +76,9 @@ li::before {
   width: 10rem;
   min-height: auto;
 }
+.page {
+  opacity: 0;
+}
 
 .container {
   display: flex;
