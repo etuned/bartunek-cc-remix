@@ -1,3 +1,3 @@
 # Edwin's site
 
-Built with love with [Remix](https://remix.run).
+Built with love with [Vite](https://vite.dev) and [React](https://reactjs.org).
